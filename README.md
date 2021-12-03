@@ -14,25 +14,35 @@ local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/T
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 
-AntiDestroy:Add(Instance)
+AntiDestroy:Add(<Instance>Object)
 ```
 ### Now if you try to destroy the object, nothing will happen.<br>This works for the :Destroy and .Destroy functions as well as and setting the Parent of the object to nil.
 
-## You can also use the ```Toggle``` function to toggle on or off whether or not you want Anti-Destroy to be activated on an object, like so:
+## You can also use the ```Toggle``` function to toggle on or off whether or not you want Anti-Destroy to be activated on an object with the following syntax:
+```lua
+AntiDestroy:Toggle(<Instance>Object, (optional)<bool>Status)
+```
+Example:
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 
-AntiDestroy:Add(Instance)
+AntiDestroy:Add(<Instance>Object)
 --The object cannot be deleted now.
 
-AntiDestroy:Toggle(Instance, false)
+AntiDestroy:Toggle(Object, <bool>false)
 --The object CAN be deleted now.
 wait(1)
-AntiDestroy:Toggle(Instance, true)
+AntiDestroy:Toggle(Object, <bool>true)
 --The object cannot be deleted now.
 ```
 
-## Also, there is the ```Stop``` function which you can use to completely deactivate Anti-Destroy. This toggles off all objects and will render all hooks useless. This also will make it so the class becomes useless, so this is irreversable. Here is an example:
+### If 
+
+## Also, there is the ```Stop``` function which you can use to completely deactivate Anti-Destroy. This toggles off all objects and will render all hooks useless. This also will make it so the class becomes useless, so this is irreversable. The syntax for the ```Stop```function is, simply this:
+```lua
+AntiDestroy:Stop()
+```
+Here is an example:
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 
