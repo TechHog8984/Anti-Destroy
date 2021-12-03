@@ -10,11 +10,11 @@
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 ```
-## Then, you can use the ```Add``` function with the following syntax:
+## Then, you can use the `Add` function with the following syntax:
 ```lua
 AntiDestroy:Add(<Instance>Object)
 ```
-Example:
+## Example:
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 
@@ -22,11 +22,12 @@ AntiDestroy:Add(Object)
 ```
 ### Now if you try to destroy the object, nothing will happen.<br>This works for the :Destroy and .Destroy functions as well as and setting the Parent of the object to nil.
 
-## You can also use the ```Toggle``` function to toggle on or off whether or not you want Anti-Destroy to be activated on an object with the following syntax:
+## You can also use the `Toggle` function to toggle on or off whether or not you want Anti-Destroy to be activated on an object with the following syntax:
 ```lua
 AntiDestroy:Toggle(<Instance>Object, (optional)<bool>Status)
 ```
-Example:
+## Status determins whether or not the object can be destroyed or not.<br>If nothing is provided as the second argument, the status will be the OPPOSITE of the current status, so if it is toggled on, running the `Toggle` function with no second argument will set the status to false and vice versa.
+## Example:
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 
@@ -35,18 +36,19 @@ AntiDestroy:Add(Object)
 
 AntiDestroy:Toggle(Object, false)
 --The object CAN be deleted now.
-wait(1)
 AntiDestroy:Toggle(Object, true)
---The object cannot be deleted now.
+--The object CANNOT be deleted now.
+AntiDestroy:Toggle(Object)
+--The object CAN be deleted again.
+AntiDestroy:Toggle(Object)
+--The object CANNOT be deleted again.
 ```
 
-### If 
-
-## Also, there is the ```Stop``` function which you can use to completely deactivate Anti-Destroy. This toggles off all objects and will render all hooks useless. This also will make it so the class becomes useless, so this is irreversable. The syntax for the ```Stop```function is, simply this:
+## Also, there is the `Stop` function which you can use to completely deactivate Anti-Destroy. This toggles off all objects and will render all hooks useless. This also will make it so the class becomes useless, so this is irreversable. The syntax for the `Stop`function is, simply this:
 ```lua
 AntiDestroy:Stop()
 ```
-Here is an example:
+## Here is an example:
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 
