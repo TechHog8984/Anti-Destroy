@@ -10,11 +10,15 @@
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 ```
-## Then, you can use the ```Add``` function:
+## Then, you can use the ```Add``` function with the following syntax:
+```lua
+AntiDestroy:Add(<Instance>Object)
+```
+Example:
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 
-AntiDestroy:Add(<Instance>Object)
+AntiDestroy:Add(Object)
 ```
 ### Now if you try to destroy the object, nothing will happen.<br>This works for the :Destroy and .Destroy functions as well as and setting the Parent of the object to nil.
 
@@ -26,13 +30,13 @@ Example:
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 
-AntiDestroy:Add(<Instance>Object)
+AntiDestroy:Add(Object)
 --The object cannot be deleted now.
 
-AntiDestroy:Toggle(Object, <bool>false)
+AntiDestroy:Toggle(Object, false)
 --The object CAN be deleted now.
 wait(1)
-AntiDestroy:Toggle(Object, <bool>true)
+AntiDestroy:Toggle(Object, true)
 --The object cannot be deleted now.
 ```
 
