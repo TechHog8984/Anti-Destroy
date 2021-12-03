@@ -18,13 +18,12 @@ AntiDestroy:Add(<Instance>Object)
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 
-local GUI = Instance.new'ScreenGui'
+local GUI = Instance.new('ScreenGui', workspace)
 GUI.Name = 'OP HACKS'
-GUI.Parent = workspace
 
 AntiDestroy:Add(GUI)
 ```
-### Now if you try to destroy the object, nothing will happen.<br>This works for the `Destroy` function on an object as well as and setting the Parent of the object to nil.
+### Now if you try to destroy the object, nothing will happen.<br>This works for calling the Destroy function on an object as well as and setting the Parent of the object to nil.
 
 ## You can also use the `Toggle` function to toggle on or off whether or not you want Anti-Destroy to be activated on an object with the following syntax:
 ```lua
@@ -35,17 +34,20 @@ AntiDestroy:Toggle(<Instance>Object, (optional)<bool>Status)
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 
-AntiDestroy:Add(Object)
---The object cannot be deleted now.
+local GUI = Instance.new('ScreenGui', workspace)
+GUI.Name = 'OP HACKS'
 
-AntiDestroy:Toggle(Object, false)
---The object CAN be deleted now.
-AntiDestroy:Toggle(Object, true)
---The object CANNOT be deleted now.
-AntiDestroy:Toggle(Object)
---The object CAN be deleted again.
-AntiDestroy:Toggle(Object)
---The object CANNOT be deleted again.
+AntiDestroy:Add(GUI)
+--GUI cannot be deleted now.
+
+AntiDestroy:Toggle(GUI, false)
+--GUI CAN be deleted now.
+AntiDestroy:Toggle(GUI, true)
+--GUI CANNOT be deleted now.
+AntiDestroy:Toggle(GUI)
+--GUI CAN be deleted again.
+AntiDestroy:Toggle(GUI)
+--GUI CANNOT be deleted again.
 ```
 
 ## Also, there is the `Stop` function which you can use to completely deactivate Anti-Destroy. This toggles off all objects and will render all hooks useless. This also will make it so the class becomes useless, so this is irreversable. The syntax for the `Stop`function is, simply this:
@@ -56,22 +58,31 @@ AntiDestroy:Stop()
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 
-AntiDestroy:Add(Object1)
-AntiDestroy:Add(Object2)
-AntiDestroy:Add(Object3)
---The objects cannot be destroyed.
+local GUI = Instance.new('ScreenGui', workspace)
+GUI.Name = 'OP HACKS'
 
-AntiDestroy:Toggle(Object1, false)
---Object1 can be deleted, while Object2 and Object3 cannot.
+local GUI2 = Instance.new('ScreenGui', workspace)
+GUI2.Name = 'SEMI-OP HACKS'
+
+local GUI3 = Instance.new('ScreenGui', workspace)
+GUI3.Name = 'DECENT HACKS'
+
+AntiDestroy:Add(GUI)
+AntiDestroy:Add(GUI2)
+AntiDestroy:Add(GUI3)
+--The gui's cannot be destroyed.
+
+AntiDestroy:Toggle(GUI, false)
+--GUI can be deleted, while GUI2 and GUI3 cannot.
 AntiDestroy:Stop()
---Now, all objects can be deleted again.
-AntiDestroy:Toggle(Object1, true)
+--Now, all gui's can be deleted again.
+AntiDestroy:Toggle(GUI, true)
 --Will error, as the class is now destroyed after running the Stop function.
 ```
 
 ## If you want to toggle all of the objects without stopping or manually keeping track of them, then you can use the `ToggleAll` function with the following syntax:
 ```lua
-AntiDestroy:ToggleAll(<bool>Status)
+AntiDestroy:ToggleAll((optional)<bool>Status)
 ```
 ### This function is the same as the `Toggle` function, except for the fact that you do not provide an Instance as it toggles all of the objects that have been added.
 
