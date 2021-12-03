@@ -20,7 +20,7 @@ local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/T
 
 AntiDestroy:Add(Object)
 ```
-### Now if you try to destroy the object, nothing will happen.<br>This works for the :Destroy and .Destroy functions as well as and setting the Parent of the object to nil.
+### Now if you try to destroy the object, nothing will happen.<br>This works for the `Destroy` function on an object as well as and setting the Parent of the object to nil.
 
 ## You can also use the `Toggle` function to toggle on or off whether or not you want Anti-Destroy to be activated on an object with the following syntax:
 ```lua
