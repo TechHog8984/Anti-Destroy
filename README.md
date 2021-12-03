@@ -94,4 +94,4 @@ AntiDestroy:Remove(<Instance>Object)
 # Extra info
 
 ## That is all for Anti-Destroy, thanks for reading!
-### If you experience any issues, bugs, etc,. or even if you want to make a suggestion, please make a [new issue](https://github.com/TechHog8984/Anti-Destroy/issues/new).<br>If you have any questions regarding the code itself, you can look at the [source code](/script/AntiDestroy.lua) (contains just the plain source code with no notes / any comments regarding the code itself).
+### If you experience any issues, bugs, etc,. or even if you want to make a suggestion, please make a [new issue](https://github.com/TechHog8984/Anti-Destroy/issues/new).<br>If you have any questions regarding the code itself, you can look at the [source code](/script/AntiDestroy.lua) (at the moment, contains just the plain source code with no notes / any comments regarding the code itself).
