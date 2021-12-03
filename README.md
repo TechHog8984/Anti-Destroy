@@ -78,4 +78,4 @@ AntiDestroy:Remove(<Instance>Object)
 
 # Extra info
 
-## That it all for Anti-Destroy!<br>Thanks for reading!<br>If you experience any issues, bugs, etc,. or even if you want to make a suggestion, please make a [new issue]('https://github.com/TechHog8984/Anti-Destroy/issues/new').
+## That it all for Anti-Destroy, thanks for reading!<br>If you experience any issues, bugs, etc,. or even if you want to make a suggestion, please make a [new issue]('https://github.com/TechHog8984/Anti-Destroy/issues/new').
