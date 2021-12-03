@@ -26,7 +26,7 @@ AntiDestroy:Add(Object)
 ```lua
 AntiDestroy:Toggle(<Instance>Object, (optional)<bool>Status)
 ```
-### Status determins whether or not the object can be destroyed or not.<br>If nothing is provided as the second argument, the status will be the OPPOSITE of the current status, so if it is toggled on, running the `Toggle` function with no second argument will set the status to false and vice versa.
+### Status determines whether or not the object can be destroyed or not.<br>If nothing is provided as the second argument, the status will be the OPPOSITE of the current status, so if it is toggled on, running the `Toggle` function with no second argument will set the status to false and vice versa.
 ## Example:
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
