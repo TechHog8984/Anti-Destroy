@@ -69,10 +69,27 @@ function Class:Toggle(Object, Bool)
     if Object and typeof(Object) == 'Instance' then
         local Index, Value = tablefindByIndex(Objects, Object)
         if Index and Value ~= nil then
-            Objects[Object] = Bool
+            if Bool ~= nil then
+                Objects[Object] = Bool
+            else
+                Objects[Object] = not Objects[Object]
+            end
+        else
+            return error('failed to find object in objects', 2)
         end
     else
         return error('expected Instance, got ' .. typeof(Object), 2)
+    end
+end
+function Class:ToggleAll(Bool)
+    for Object, Status in next, Objects do
+        if Object and Status ~= nil then
+            if Bool ~= nil then
+                Objects[Object] = Bool
+            else
+                Objects[Object] = not Objects[Object]
+            end
+        end
     end
 end
 function Class:Stop()
