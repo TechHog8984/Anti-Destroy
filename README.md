@@ -26,7 +26,7 @@ AntiDestroy:Add(Object)
 ```lua
 AntiDestroy:Toggle(<Instance>Object, (optional)<bool>Status)
 ```
-## Status determins whether or not the object can be destroyed or not.<br>If nothing is provided as the second argument, the status will be the OPPOSITE of the current status, so if it is toggled on, running the `Toggle` function with no second argument will set the status to false and vice versa.
+### Status determins whether or not the object can be destroyed or not.<br>If nothing is provided as the second argument, the status will be the OPPOSITE of the current status, so if it is toggled on, running the `Toggle` function with no second argument will set the status to false and vice versa.
 ## Example:
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
@@ -64,3 +64,18 @@ AntiDestroy:Stop()
 AntiDestroy:Toggle(Object1, true)
 --Will error, as the class is now destroyed after running the Stop function.
 ```
+
+## If you want to toggle all of the objects without stopping or manually keeping track of them, then you can use the `ToggleAll` function with the following syntax:
+```lua
+AntiDestroy:ToggleAll(<bool>Status)
+```
+### This function is the same as the `Toggle` function, except for the fact that you do not provide an Instance as it toggles all of the objects that have been added.
+
+## If you want to toggle a specific object off forever, then you can use the `Remove` function with the following syntax:
+```lua
+AntiDestroy:Remove(<Instance>Object)
+```
+
+# Extra info
+
+## That it all for Anti-Destroy!<br>Thanks for reading!<br>If you experience any issues, bugs, etc,. or even if you want to make a suggestion, please make a [new issue]('https://github.com/TechHog8984/Anti-Destroy/issues/new').
