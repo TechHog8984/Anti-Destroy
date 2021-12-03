@@ -18,7 +18,11 @@ AntiDestroy:Add(<Instance>Object)
 ```lua
 local AntiDestroy = loadstring(game:HttpGet('https://raw.githubusercontent.com/TechHog8984/Anti-Destroy/main/script/AntiDestroy.lua'))()
 
-AntiDestroy:Add(Object)
+local GUI = Instance.new'ScreenGui'
+GUI.Name = 'OP HACKS'
+GUI.Parent = workspace
+
+AntiDestroy:Add(GUI)
 ```
 ### Now if you try to destroy the object, nothing will happen.<br>This works for the `Destroy` function on an object as well as and setting the Parent of the object to nil.
 
